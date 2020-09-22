@@ -8,8 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.developers.rozan.inventtestmobile.R;
@@ -19,6 +23,8 @@ import com.developers.rozan.inventtestmobile.database.Product;
 import com.developers.rozan.inventtestmobile.database.ProductPrice;
 import com.developers.rozan.inventtestmobile.model.ItemProduct;
 import com.developers.rozan.inventtestmobile.model.ItemProductPrice;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -125,13 +131,37 @@ public class MainActivity extends AppCompatActivity implements MainView, MainAda
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Collections.sort(allProducts, new Comparator<AllProduct>() {
+                final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity.this, R.style.BottomSheetDialogTheme);
+                final View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottom_sheet, (LinearLayout) findViewById(R.id.llBottom));
+                bottomSheetView.findViewById(R.id.btnLetters).setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public int compare(AllProduct allProduct, AllProduct t1) {
-                        return allProduct.getNamaBarang().compareTo(t1.getNamaBarang());
+                    public void onClick(View view) {
+                        Collections.sort(allProducts, new Comparator<AllProduct>() {
+                            @Override
+                            public int compare(AllProduct allProduct, AllProduct t1) {
+                                return allProduct.getNamaBarang().compareTo(t1.getNamaBarang());
+                            }
+                        });
+                        mainAdapter.notifyDataSetChanged();
+                        bottomSheetDialog.dismiss();
                     }
                 });
-                mainAdapter.notifyDataSetChanged();
+
+                bottomSheetView.findViewById(R.id.btnNumbers).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Collections.sort(allProducts, new Comparator<AllProduct>() {
+                            @Override
+                            public int compare(AllProduct allProduct, AllProduct t1) {
+                                return String.valueOf(allProduct.getHargaBarang()).compareTo(String.valueOf(t1.getHargaBarang()));
+                            }
+                        });
+                        mainAdapter.notifyDataSetChanged();
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
             }
         });
     }
@@ -204,5 +234,10 @@ public class MainActivity extends AppCompatActivity implements MainView, MainAda
         value = formatter.format(Double.valueOf(isValue));
 
         return value;
+    }
+
+    public void showBottomSheet(BottomSheetDialogFragment bottomSheetDialogFragment, Bundle bundle) {
+        bottomSheetDialogFragment.setArguments(bundle);
+        bottomSheetDialogFragment.show(getSupportFragmentManager(), "halah sia euy");
     }
 }

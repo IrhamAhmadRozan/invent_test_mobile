@@ -83,7 +83,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> 
                 } else {
                     List<AllProduct> listFiltered = new ArrayList<>();
                     for (AllProduct row : searchList) {
-                        if (row.getNamaBarang().toLowerCase().contains(charString.toLowerCase())) {
+                        if (row.getNamaBarang().toLowerCase().contains(charString.toLowerCase()) || String.valueOf(row.getHargaBarang()).toLowerCase().contains(charString.toLowerCase())) {
                             if (mItemClickListener != null)
                                 mItemClickListener.onNotFoundData(charString, false);
                             listFiltered.add(row);
