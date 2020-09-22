@@ -235,9 +235,4 @@ public class MainActivity extends AppCompatActivity implements MainView, MainAda
 
         return value;
     }
-
-    public void showBottomSheet(BottomSheetDialogFragment bottomSheetDialogFragment, Bundle bundle) {
-        bottomSheetDialogFragment.setArguments(bundle);
-        bottomSheetDialogFragment.show(getSupportFragmentManager(), "halah sia euy");
-    }
 }
