@@ -1,6 +1,5 @@
-package com.developers.rozan.inventtestmobile.feature;
+package com.developers.rozan.inventtestmobile.feature.MainActivity;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

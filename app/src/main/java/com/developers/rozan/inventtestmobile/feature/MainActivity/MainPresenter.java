@@ -1,6 +1,4 @@
-package com.developers.rozan.inventtestmobile.feature;
-
-import android.util.Log;
+package com.developers.rozan.inventtestmobile.feature.MainActivity;
 
 import com.developers.rozan.inventtestmobile.base.BasePresenter;
 import com.developers.rozan.inventtestmobile.model.ResponseProduct;

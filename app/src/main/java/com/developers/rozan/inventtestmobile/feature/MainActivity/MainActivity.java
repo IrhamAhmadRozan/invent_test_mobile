@@ -1,4 +1,4 @@
-package com.developers.rozan.inventtestmobile.feature;
+package com.developers.rozan.inventtestmobile.feature.MainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -9,8 +9,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -24,7 +22,6 @@ import com.developers.rozan.inventtestmobile.database.ProductPrice;
 import com.developers.rozan.inventtestmobile.model.ItemProduct;
 import com.developers.rozan.inventtestmobile.model.ItemProductPrice;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;

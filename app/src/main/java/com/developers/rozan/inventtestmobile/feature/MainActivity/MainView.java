@@ -1,4 +1,4 @@
-package com.developers.rozan.inventtestmobile.feature;
+package com.developers.rozan.inventtestmobile.feature.MainActivity;
 
 import com.developers.rozan.inventtestmobile.base.BaseView;
 import com.developers.rozan.inventtestmobile.model.ItemProduct;
