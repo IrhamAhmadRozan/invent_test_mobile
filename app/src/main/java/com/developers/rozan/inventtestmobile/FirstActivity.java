@@ -1,13 +1,11 @@
-package com.developers.rozan.inventtestmobile.feature.FirstActivity;
+package com.developers.rozan.inventtestmobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-import com.developers.rozan.inventtestmobile.R;
-import com.developers.rozan.logutil.feature.MainActivity.MainActivty;
+import com.developers.rozan.logutil.feature.MainActivity;
 import com.invent.cashpickup.feature.splashscreen.CP_SplashScreenActivity;
 import com.invent.cashpickup.utils.constant.CP_SCashPickup;
 import com.invent.cashpickup.utils.model.CP_UserData;
@@ -25,7 +23,7 @@ public class FirstActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.buttonITM).setOnClickListener(view -> {
-            Intent i = new Intent(FirstActivity.this, MainActivty.class);
+            Intent i = new Intent(FirstActivity.this, MainActivity.class);
             startActivity(i);
         });
     }

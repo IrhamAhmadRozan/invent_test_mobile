@@ -1,4 +1,4 @@
-package com.developers.rozan.logutil.feature.MainActivity;
+package com.developers.rozan.logutil.feature;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -30,7 +30,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivty extends AppCompatActivity implements MainView, MainAdapter.OnItemClickListener, MainAdapter.OnQuerySearchListener, SearchView.OnQueryTextListener {
+public class MainActivity extends AppCompatActivity implements MainView, MainAdapter.OnItemClickListener,
+        MainAdapter.OnQuerySearchListener, SearchView.OnQueryTextListener {
 
     ProgressDialog dialog;
     MainPresenter mainPresenter;
@@ -128,7 +129,7 @@ public class MainActivty extends AppCompatActivity implements MainView, MainAdap
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivty.this, R.style.BottomSheetDialogTheme);
+                final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity.this, R.style.BottomSheetDialogTheme);
                 final View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottom_sheet, (LinearLayout) findViewById(R.id.llBottom));
                 bottomSheetView.findViewById(R.id.btnLetters).setOnClickListener(new View.OnClickListener() {
                     @Override

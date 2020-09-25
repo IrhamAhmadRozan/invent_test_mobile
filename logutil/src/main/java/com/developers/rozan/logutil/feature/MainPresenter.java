@@ -1,4 +1,4 @@
-package com.developers.rozan.logutil.feature.MainActivity;
+package com.developers.rozan.logutil.feature;
 
 import com.developers.rozan.logutil.base.BasePresenter;
 import com.developers.rozan.logutil.model.ResponseProduct;

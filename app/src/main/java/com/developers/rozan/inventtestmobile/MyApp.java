@@ -1,4 +1,4 @@
-package com.developers.rozan.inventtestmobile.feature.FirstActivity;
+package com.developers.rozan.inventtestmobile;
 
 import com.invent.cashpickup.CashPickupApplication;
 

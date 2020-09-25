@@ -1,4 +1,4 @@
-package com.developers.rozan.logutil.feature.MainActivity;
+package com.developers.rozan.logutil.feature;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +19,7 @@ import com.developers.rozan.logutil.database.AllProduct;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.developers.rozan.logutil.feature.MainActivity.MainActivty.formatCurrencyDouble;
+import static com.developers.rozan.logutil.feature.MainActivity.formatCurrencyDouble;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> implements Filterable {
 
