@@ -47,5 +47,5 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     implementation 'com.gitlab.invent-frontend:cash-pickup:1.1.15'
-    implementation project(':logutil')
+    implementation 'com.github.IrhamAhmadRozan:invent_test_mobile:0.1.1'
 }
