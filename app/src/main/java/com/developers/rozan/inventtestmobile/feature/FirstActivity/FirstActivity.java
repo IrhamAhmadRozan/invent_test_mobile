@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.developers.rozan.inventtestmobile.R;
-import com.developers.rozan.inventtestmobile.feature.MainActivity.MainActivity;
+import com.developers.rozan.logutil.feature.MainActivity.MainActivty;
 import com.invent.cashpickup.feature.splashscreen.CP_SplashScreenActivity;
 import com.invent.cashpickup.utils.constant.CP_SCashPickup;
 import com.invent.cashpickup.utils.model.CP_UserData;
@@ -25,8 +25,8 @@ public class FirstActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.buttonITM).setOnClickListener(view -> {
-            Intent i = new Intent(FirstActivity.this, MainActivity.class);
-            FirstActivity.this.startActivity(i);
+            Intent i = new Intent(FirstActivity.this, MainActivty.class);
+            startActivity(i);
         });
     }
 
